@@ -1,113 +1,144 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col items-center justify-between bg-[#fdfefe]">
+      {/* NAVIGATION */}
+      <nav className="flex w-full px-2 py-10 border-black border-b-4 text-slate-950 bg-green-400">
+        <div className="flex-1 w-14 bg-green-900 font-bold">
+          <p className="text-2xl tracking-wide">STREET ARTZ TOURS</p>
         </div>
-      </div>
+        <div className="flex justify-end gap-x-8 flex-1 w-64 text-base font-light">
+          <Link href="#" className="px-2.5">
+            Home
+          </Link>
+          <Link href="#" className="px-2.5">
+            Tours
+          </Link>
+          <Link href="#" className="px-2.5">
+            About
+          </Link>
+          <Link href="#" className="px-2.5">
+            Contact
+          </Link>
+          <Link href="#" className="px-2.5">
+            Login
+          </Link>
+        </div>
+      </nav>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      {/* 4 SQUARE */}
+      <section className="bg-red-400 w-full h-full px-10">
+        <div className="w-full grid grid-cols-2 gap-8">
+          {/* 4 squares */}
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          <div className="relative w[100%] h-[900px] bg-[url('/images/brick.webp')] bg-center bg-cover">
+            {/* <Image src="/images/brick.webp" width={900} height={1500} /> */}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+            <div className="bg-black w-[450px] absolute bottom-0 left-0 p-10 text-light">
+              <div className="">
+                <div className="text-8xl font-extrabold flex">
+                  <p className="text-2xl p-1 font-light">1.</p>{" "}
+                  <p className="pt-4"> BUD</p>
+                </div>
+                <p className="my-5">Nov. 15, 2038</p>
+                <p>Europe&apos;s Magical Corners</p>
+                <p>Budapest | Hungary</p>
+              </div>
+              <button className="border-solid border-2 border-white mt-20 px-20 py-4">
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div className="relative w[100%] h-[900px] bg-[url('/images/elephacto.jpg')] bg-center bg-cover">
+            {/* <Image src="/images/brick.webp" width={900} height={1500} /> */}
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+            <div className="bg-black w-[450px] absolute bottom-0 left-0 p-10 text-light">
+              <div className="">
+                <div className="text-8xl font-extrabold flex">
+                  <p className="text-2xl p-1 font-light">1.</p>{" "}
+                  <p className="pt-4"> BUD</p>
+                </div>
+                <p className="my-5">Nov. 15, 2038</p>
+                <p>Europe&apos;s Magical Corners</p>
+                <p>Budapest | Hungary</p>
+              </div>
+              <button className="border-solid border-2 border-white mt-20 px-20 py-4">
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div className="relative w[100%] h-[900px] bg-[url('/images/shops.jpeg')] bg-center bg-cover">
+            {/* <Image src="/images/brick.webp" width={900} height={1500} /> */}
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+            <div className="bg-black w-[450px] absolute bottom-0 left-0 p-10 text-light">
+              <div className="">
+                <div className="text-8xl font-extrabold flex">
+                  <p className="text-2xl p-1 font-light">1.</p>{" "}
+                  <p className="pt-4"> BUD</p>
+                </div>
+                <p className="my-5">Nov. 15, 2038</p>
+                <p>Europe&apos;s Magical Corners</p>
+                <p>Budapest | Hungary</p>
+              </div>
+              <button className="border-solid border-2 border-white mt-20 px-20 py-4">
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div className="relative w[100%] h-[900px] bg-[url('/images/mike-von-osjura.jpg')] bg-center bg-cover">
+            {/* <Image src="/images/brick.webp" width={900} height={1500} /> */}
+
+            <div className="bg-black w-[450px] absolute bottom-0 left-0 p-10 text-light">
+              <div className="">
+                <div className="text-8xl font-extrabold flex">
+                  <p className="text-2xl p-1 font-light">1.</p>{" "}
+                  <p className="pt-4"> BUD</p>
+                </div>
+                <p className="my-5">Nov. 15, 2038</p>
+                <p>Europe&apos;s Magical Corners</p>
+                <p>Budapest | Hungary</p>
+              </div>
+              <button className="border-solid border-2 border-white mt-20 px-20 py-4">
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          {/* END  */}
+        </div>
+      </section>
+
+      {/* # STREET ARTZ TOURS */}
+      <section className="text-black w-full py-16 flex justify-center">
+        <div className="w-4/5">
+          <h1 className="text-5xl font-bold">#StreetArtzTours</h1>
+          <p className="text-2xl">Street Artz Tours</p>
+          <div className="flex gap-10 py-10">
+            <p>
+              Street Artz Tours is a travel company that specializes in tours
+              that focus on street art, graffiti, and murals. Our tours are
+              designed to give you an inside look at the local street art scene
+              in cities around the world. We work with local artists, guides,
+              and organizations to create unique and immersive experiences that
+              showcase the best of the local street art scene.
+            </p>
+            <p>
+              Our tours are perfect for art lovers, street art enthusiasts, and
+              anyone who wants to explore the vibrant and dynamic world of
+              street art. Whether you are a seasoned traveler or a first-time
+              visitor, our tours are a great way to discover the hidden gems of
+              the local street art scene and get a behind-the-scenes look at the
+              artists and organizations that are shaping the urban landscape.{" "}
+              <br />
+              <button className="border-solid border-2 border-black px-8 py-3 mt-8 hover:font-bold">
+                Read More
+              </button>
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
