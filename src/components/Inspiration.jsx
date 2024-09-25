@@ -20,7 +20,7 @@ const Inspiration = () => {
             its impact on the community.
           </p>
 
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <div className="" style={{ width: "100%" }}>
               <h3 className="text-2xl py-8 font-bold text-center">
                 {" "}
